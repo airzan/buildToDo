@@ -75,7 +75,7 @@ class ToDoList extends React.Component {
       return;
     }
 
-    fetch("https://altcademy-to-do-list-api.herokuapp.com/tasks?api_key=48", {
+    fetch("https://altcademy-to-do-list-api.herokuapp.com/tasks?api_key=88", {
       method: "POST",
       mode: "cors",
       headers: { "Content-Type": "application/json" },
@@ -100,7 +100,7 @@ class ToDoList extends React.Component {
     if (!id) {
       return;
     }
-    fetch(`https://altcademy-to-do-list-api.herokuapp.com/tasks/${id}?api_key=48`, {
+    fetch(`https://altcademy-to-do-list-api.herokuapp.com/tasks/${id}?api_key=88`, {
       method: "DELETE",
       mode: "cors",
     }).then(checkStatus)
@@ -120,7 +120,7 @@ class ToDoList extends React.Component {
     }
     const newState = completed ? 'active' : 'complete';
 
-    fetch(`https://altcademy-to-do-list-api.herokuapp.com/tasks/${id}/mark_${newState}?api_key=48`, {
+    fetch(`https://altcademy-to-do-list-api.herokuapp.com/tasks/${id}/mark_${newState}?api_key=88`, {
       method: "PUT",
       mode: "cors",
     }).then(checkStatus)
